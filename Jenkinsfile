@@ -7,6 +7,10 @@ pipeline {
         OPENSHIFT_NAMESPACE = 'jenkins-metrics'
     }
 
+    stage('Clone') {
+        checkout scm
+    }
+
     stages {
         stage('Create Jenkins') {
             steps {

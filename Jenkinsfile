@@ -4,7 +4,9 @@ pipeline {
 
     stages {
         stage('Clone') {
-            checkout scm
+            stpes {
+                checkout scm
+            }
         }
         stage('Create Jenkins') {
             steps {

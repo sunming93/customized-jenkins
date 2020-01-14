@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  name: custom-jenkins-pipeline
+spec:
+  runPolicy: Parallel
+  source:
+    git:
+      ref: master
+      uri: https://github.com/ianff/customized-jenkins.git
+  strategy:
+    jenkinsPipelineStrategy:
+      jenkinsfilePath: Jenkinsfile
+    type: JenkinsPipeline

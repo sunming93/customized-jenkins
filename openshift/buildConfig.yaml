@@ -1,4 +1,14 @@
 apiVersion: v1
+kind: ImageStream
+metadata:
+  name: custom-jenkins
+  labels:
+    application: custom-jenkins
+spec:
+  tags:
+    - name: latest
+---
+apiVersion: v1
 kind: BuildConfig
 metadata:
   name: custom-jenkins-build
@@ -17,4 +27,4 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: customized-jenkins:latest
+      name: custom-jenkins:latest

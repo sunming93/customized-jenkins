@@ -1,9 +1,6 @@
 pipeline {
 
-    environment {
-        OPENSHIFT_SERVER = 'https://192.168.64.2:8443/'
-        OPENSHIFT_NAMESPACE = 'jenkins-metrics'
-    }
+    agent any
 
     stages {
         stage('Clone') {
@@ -21,22 +18,6 @@ pipeline {
             steps {
                 sh './verify-jenkins.sh'
             }
-        }
-    }
-
-    post {
-        always {
-            onDebug {
-                echo "Debugging commit, waiting 900 seconds"
-                sh 'sleep 900'
-            }
-        }
-        success {
-            echo "Deleting Jenkins instance"
-            sh './teardown.sh'
-        }
-        failure {
-            echo "Build failed, not removing Jenkins"
         }
     }
 

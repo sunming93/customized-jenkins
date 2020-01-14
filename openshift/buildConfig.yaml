@@ -6,6 +6,7 @@ spec:
   source:
     git:
       uri: https://github.com/ianff/customized-jenkins.git
+      ref: master
     type: Git
   strategy:
     sourceStrategy:
@@ -16,4 +17,4 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: custom-jenkins:latest
+      name: customized-jenkins:latest

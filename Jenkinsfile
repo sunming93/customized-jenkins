@@ -1,5 +1,3 @@
-@Library('jenkins-share-libs@master') _
-
 pipeline {
 
     environment {

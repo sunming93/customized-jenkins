@@ -18,4 +18,4 @@ Manual Deploy Jenkins Instance on Minishift
 
 3. oc apply openshift/deployment-config.yaml
 
-4. oc process openshift/custom-jenkins | oc apply -f -
+4. oc process custom-jenkins | oc apply -f -

@@ -5,11 +5,10 @@ pipeline {
         OPENSHIFT_NAMESPACE = 'jenkins-metrics'
     }
 
-    stage('Clone') {
-        checkout scm
-    }
-
     stages {
+        stage('Clone') {
+            checkout scm
+        }
         stage('Create Jenkins') {
             steps {
                 sh 'oc apply -f openshift/buildConfig.yaml'

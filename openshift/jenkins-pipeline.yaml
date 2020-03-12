@@ -7,7 +7,7 @@ spec:
   source:
     git:
       ref: master
-      uri: https://github.com/ianff/customized-jenkins.git
+      uri: https://github.com/Kefan-S/customized-jenkins.git
   strategy:
     jenkinsPipelineStrategy:
       jenkinsfilePath: Jenkinsfile

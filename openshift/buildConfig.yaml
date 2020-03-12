@@ -15,7 +15,7 @@ metadata:
 spec:
   source:
     git:
-      uri: https://github.com/ianff/customized-jenkins.git
+      uri: https://github.com/Kefan-S/customized-jenkins.git
       ref: master
     type: Git
   strategy:
